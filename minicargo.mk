@@ -89,6 +89,7 @@ else ifeq ($(RUSTC_VERSION),1.39.0)
 else
   MINICARGO_FLAGS_$(OUTDIR)cargo := --features vendored-openssl
   MINICARGO_FLAGS_$(OUTDIR)rustc := --features llvm
+  MINICARGO_FLAGS_$(OUTDIR)rustc := --features use-libc
   RUSTC_OUT_BIN := rustc_main
 endif
 
